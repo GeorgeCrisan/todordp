@@ -34,9 +34,7 @@ class TheList extends React.Component {
       this.toggleComplete = this.toggleComplete.bind(this);
       this.deleteItem = this.deleteItem.bind(this);
     }
-    componentDidMount () {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
+    
     
    componentWillReceiveProps(){
        localStorage.setItem('fullstate',JSON.stringify(this.props.fullstate));
@@ -79,6 +77,11 @@ class TodoApp extends React.Component {
         }
        this.onSubmit = this.onSubmit.bind(this);
    }
+
+   componentDidMount () {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
+  
      componentDidUpdate(){
         localStorage.setItem('fullstate',JSON.stringify(this.props.fullstate));
      }
